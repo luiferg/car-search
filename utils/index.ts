@@ -4,7 +4,7 @@ import { CarProps, FilterProps } from '@/types'
 export async function fetchCars(filters: FilterProps) {
   const { manufacturer, year, model, limit, fuel } = filters
   const headers = {
-    'X-RapidAPI-Key': 'd6088f89ccmsh4696d054dbfa99fp16f322jsnfcd0d52730a2',
+    'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPID_API_KEY || '',
     'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com',
   }
   const response = await fetch(
@@ -34,7 +34,10 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
 export const generateCarImageUrl = (car: CarProps, angle?: string) => {
   const url = new URL('https://cdn.imagin.studio/getimage')
   const { make, year, model } = car
-  url.searchParams.append('customer', 'hrjavascript-mastery')
+  url.searchParams.append(
+    'customer',
+    process.env.NEXT_PUBLIC_IMAGIN_API_KEY || ''
+  )
   url.searchParams.append('make', make)
   url.searchParams.append('modelFamily', model.split(' ')[0])
   url.searchParams.append('zoomType', 'fullscreen')

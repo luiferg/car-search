@@ -11,8 +11,8 @@ const Footer = () => {
           <Image
             src='/logo.svg'
             alt='logo'
-            width={118}
-            height={18}
+            width={200}
+            height={25}
             className='object-contain'
           />
           <p className='text-base text-gray-700'>
