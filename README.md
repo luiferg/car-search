@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CarSearch App
 
-## Getting Started
+A basic project where users can be search cars for rent, filtering per brand, model, fuel and year.
 
-First, run the development server:
+In this repository you will find two versions of this same project, the first one is a server-side render project and the second one (located in the client-side branch) is being rendered, as its name says, on the client-side. This because of a Next.js 13 bug on the search methods.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![image](https://github.com/luiferg/car-search/assets/70179228/1ebb2af6-441c-4d18-876f-f09f2ee43dcf)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project's techs are **Next.js 13**, **TypeScript**, **TailwindCSS** and **headlessui** for some components.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+![image](https://github.com/luiferg/car-search/assets/70179228/e02f3714-96d2-4add-8a9b-e25b9a3459fd)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API's
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+For images and car information (not real data) I'm consuming two API's. 
 
-## Deploy on Vercel
+### Cars by API-Ninjas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This API provided all the information from every car that users search for, so they can have a complete tech sheet of each car.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Car Imagery by Imagin.Studio
+
+API than allows the application to show accurate images of the cars.
+
+![image](https://github.com/luiferg/car-search/assets/70179228/d773169f-3b4f-45b5-a618-8f8d4af69cae)
+
